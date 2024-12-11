@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skate and Snowboard Video Tracks</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header image and title area -->
+  <header>
+    <!-- Background image -->
+  </header>
+
+  <!-- Container for page title, filter buttons, and search input -->
+  <div class="header-content">
+    <div class="page-title">
+      <h1>Skate and Snowboard Video Tracks</h1>
+    </div>
+
+    <!-- Filter buttons and search input -->
+    <div class="search-container">
+      <button id="all-btn" class="filter-btn active" onclick="filterByType('All')">All</button>
+      <button id="snow-btn" class="filter-btn" onclick="filterByType('Snow')">Snowboard Videos</button>
+      <button id="skate-btn" class="filter-btn" onclick="filterByType('Skate')">Skate Videos</button>
+      <input type="text" id="search-input" placeholder="Search by Crew, Title, Rider, Song, etc..." onkeyup="filterVideos()">
+    </div>
+  </div>
+
+  <main>
+    <!-- Video list -->
+    <table id="video-list">
+      <thead>
+        <tr>
+          <th data-column="Type" onclick="sortColumnBy('Type')">Type</th>
+          <th data-column="Section" onclick="sortColumnBy('Section')">Section</th>
+          <th data-column="Crew" onclick="sortColumnBy('Crew')">Crew</th>
+          <th data-column="Title" onclick="sortColumnBy('Title')">Title</th>
+          <th data-column="Year" onclick="sortColumnBy('Year')">Year</th>
+          <th data-column="Director" onclick="sortColumnBy('Director')">Director</th>
+          <th data-column="Song" onclick="sortColumnBy('Song')">Song</th>
+          <th data-column="Artist" onclick="sortColumnBy('Artist')">Artist</th>
+        </tr>
+      </thead>
+      <tbody></tbody> <!-- Video data will be inserted here -->
+    </table>
+  </main>
+
+  <footer>
+    <p></p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+/* Basic resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and general page layout */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+/* Header container with background image */
+header {
+  background-image: url('images/Database Header Banner.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 48px 20px;
+  color: white;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  border-top: 4px solid #2980b9;
+}
+
+/* Container for page title, filter buttons, and search input */
+.header-content {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+/* Page title styling */
+.page-title {
+  font-size: 24px;
+  font-family: "Covered By Your Grace", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: #333;
+  margin: 0;
+}
+
+/* Container for filter buttons and search input */
+.search-container {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+/* Button and search input styling */
+.filter-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.filter-btn:hover {
+  background-color: #2980b9;
+}
+
+.filter-btn:focus {
+  outline: none;
+  border-color: #2980b9;
+}
+
+.filter-btn.active {
+  background-color: #1f6f9d;
+}
+
+#search-input {
+  padding: 10px;
+  width: 350px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#search-input:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+/* Table styling */
+#video-list {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border-collapse: collapse;
+}
+
+#video-list th, #video-list td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+#video-list th {
+  background-color: #3498db;
+  color: white;
+}
+
+#video-list td {
+  background-color: #fff;
+}
+
+#video-list tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+#video-list tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Footer styling */
+footer {
+  background-image: url('images/Database Footer Banner.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 48px 20px;
+  color: white;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  border-top: 4px solid #2980b9;
+}
+
+footer p {
+  margin: 0;
+}
