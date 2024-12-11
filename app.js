@@ -39,9 +39,9 @@ function displayVideos(videos) {
     // Determine the image for the "Type" column
     let typeImage = '';
     if (video.Type === 'Snow') {
-      typeImage = '<img src="images/Snow Flake.png" alt="Snow" style="width: 30px; height: auto;" />';
+      typeImage = '<img src="Snow Flake.png" alt="Snow" style="width: 30px; height: auto;" />';
     } else if (video.Type === 'Skate') {
-      typeImage = '<img src="images/Skate Wheel.png" alt="Skate" style="width: 30px; height: auto;" />';
+      typeImage = '<img src="Skate Wheel.png" alt="Skate" style="width: 30px; height: auto;" />';
     } else {
       typeImage = video.Type;  // Default: display the text if the type doesn't match Snow or Skate
     }
