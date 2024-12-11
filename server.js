@@ -3,9 +3,6 @@ const sqlite3 = require('sqlite3');
 const cors = require('cors');  // Import CORS package
 const app = express();  // Initialize the app
 const port = process.env.PORT || 3000;  // Default to 3000 for local, Heroku provides its own port
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
-});
 
 // Use the CORS middleware globally
 app.use(cors());  // Allow all origins by default (you can customize this if needed)
@@ -48,7 +45,7 @@ app.get('/get_video_data', (req, res) => {
   });
 });
 
-// Start the server
+// Start the server (remove this second listen call)
 app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
+  console.log(`Server is running on port ${port}`);
 });
