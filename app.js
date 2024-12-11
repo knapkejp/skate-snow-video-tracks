@@ -1,10 +1,3 @@
-const express = require('express');  // Import express
-const app = express();  // Initialize the app
-const port = process.env.PORT || 3000;  // Default to 3000 for local, Heroku provides its own port
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
-});
-
 // Global variables
 let allVideos = [];  // Store all videos
 let filteredVideos = [];  // Store the filtered videos
