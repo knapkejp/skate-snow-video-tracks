@@ -5,11 +5,11 @@
   },
   "name": "15136",
   "version": "1.0.0",
-  "main": "app.js",
+  "main": "server.js",
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
