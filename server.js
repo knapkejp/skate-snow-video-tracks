@@ -7,6 +7,11 @@ const port = process.env.PORT || 3000;  // Default to 3000 for local, Heroku pro
 // Use the CORS middleware globally
 app.use(cors());  // Allow all origins by default (you can customize this if needed)
 
+// Route for the root URL
+app.get('/', (req, res) => {
+  res.send('Welcome to the Snowboard Video Tracks API');
+});
+
 // Connect to SQLite database (replace with your SQLite database file)
 const db = new sqlite3.Database('./Snowboard Video Tracks.db', sqlite3.OPEN_READWRITE, (err) => {
   if (err) {
@@ -45,7 +50,7 @@ app.get('/get_video_data', (req, res) => {
   });
 });
 
-// Start the server (remove this second listen call)
+// Start the server
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
