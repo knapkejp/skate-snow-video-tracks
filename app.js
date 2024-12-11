@@ -171,7 +171,9 @@ function filterVideos() {
 }
 
 // Initialize page
-window.onload = function() {
-  fetchVideos();  // Fetch the videos
-  filterByType('All');  // Set "All" filter as the default on page load
-};
+if (typeof window !== "undefined") {
+  window.onload = function() {
+    fetchVideos();  // Fetch the videos
+    filterByType('All');  // Set "All" filter as the default on page load
+  };
+}
