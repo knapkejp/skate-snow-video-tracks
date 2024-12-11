@@ -14,8 +14,4 @@
   "author": "",
   "license": "ISC",
   "description": ""
-  "scripts": {
-  "start": "node app.js"
-}
-
 }
