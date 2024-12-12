@@ -78,6 +78,7 @@ footer {
   flex-wrap: nowrap; /* Prevent wrapping */
   width: 100%; /* Make the container stretch the full width */
   justify-content: space-between; /* Space out items */
+  box-sizing: border-box; /* Ensure padding is included in width */
 }
 
 /* Button and search input styling */
@@ -109,6 +110,7 @@ footer {
   font-size: 1rem; /* Default size in rem */
   border: 1px solid #ccc;
   border-radius: 4px;
+  box-sizing: border-box; /* Ensure padding is included in width */
 }
 
 /* Table styling */
@@ -118,6 +120,7 @@ footer {
   border-collapse: collapse;
   table-layout: auto; /* Ensure columns adjust based on content */
   overflow: hidden; /* Prevent overflow on smaller screens */
+  box-sizing: border-box; /* Ensure padding is considered in width */
 }
 
 #video-list th, #video-list td {
@@ -170,10 +173,13 @@ footer {
   .search-container {
     flex-wrap: nowrap; /* Prevent wrapping */
     justify-content: space-between; /* Keep items spaced */
+    width: 100%; /* Ensure search bar container fits within the screen */
+    box-sizing: border-box; /* Include padding in width */
   }
 
   .filter-btn, #search-input {
     width: 100%; /* Ensure items take up full width in column layout */
+    box-sizing: border-box; /* Ensure padding is included in width */
   }
 
   .filter-btn {
