@@ -17,7 +17,7 @@ body {
 /* Header container with background image */
 header {
   background-image: url('Database Header Banner.png');
-  background-size: cover; /* Ensure the background image contains the element */
+  background-size: contain; /* Ensure the background image contains the element */
   background-position: center;
   background-repeat: no-repeat;
   padding: 48px 20px;
@@ -58,15 +58,13 @@ footer {
 
 /* Page title styling */
 .page-title {
-  font-size: 0.875rem; /* Reduced font size for mobile */
+  font-size: 1.5rem; /* Default size with rem for scaling */
   font-family: "Covered By Your Grace", cursive;
   font-weight: 400;
   font-style: normal;
   color: #333;
   margin-bottom: 10px; /* Add space between title and search container */
   text-align: center; /* Center text */
-  padding-left: 10px; /* Add left padding */
-  padding-right: 10px; /* Add right padding */
   white-space: nowrap; /* Prevent text wrapping */
   overflow: hidden;
   text-overflow: ellipsis; /* Add ellipsis if text overflows */
@@ -80,7 +78,6 @@ footer {
   flex-wrap: nowrap; /* Prevent wrapping */
   width: 100%; /* Make the container stretch the full width */
   justify-content: space-between; /* Space out items */
-  box-sizing: border-box; /* Ensure padding is included in width */
 }
 
 /* Button and search input styling */
@@ -112,7 +109,6 @@ footer {
   font-size: 1rem; /* Default size in rem */
   border: 1px solid #ccc;
   border-radius: 4px;
-  box-sizing: border-box; /* Ensure padding is included in width */
 }
 
 /* Table styling */
@@ -122,7 +118,6 @@ footer {
   border-collapse: collapse;
   table-layout: auto; /* Ensure columns adjust based on content */
   overflow: hidden; /* Prevent overflow on smaller screens */
-  box-sizing: border-box; /* Ensure padding is considered in width */
 }
 
 #video-list th, #video-list td {
@@ -169,24 +164,17 @@ footer {
   }
 
   .page-title {
-    font-size: 0.75rem; /* Further reduced size for smaller mobile screens */
-    padding-left: 10px;
-    padding-right: 10px;
+    font-size: 1.125rem; /* Adjust size for medium screens */
+    padding: 0 10px; /* Add some padding around the title */
   }
 
-  /* Fix filter buttons alignment */
   .search-container {
-    display: flex;
-    gap: 15px;
-    align-items: center;
     flex-wrap: nowrap; /* Prevent wrapping */
-    justify-content: flex-start; /* Align buttons to the left */
+    justify-content: space-between; /* Keep items spaced */
   }
 
-  /* Ensure buttons and input are not stacked on mobile */
   .filter-btn, #search-input {
-    flex: 0 1 auto;
-    width: auto; /* Ensure buttons remain side-by-side */
+    width: 100%; /* Ensure items take up full width in column layout */
   }
 
   .filter-btn {
@@ -208,25 +196,33 @@ footer {
     display: block;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    table-layout: fixed; /* Fix column widths to enforce wrapping */
   }
 
   #video-list th, #video-list td {
-    white-space: normal; /* Allow wrapping within cells */
+    white-space: nowrap; /* Prevent text wrapping in small screens */
+  }
+
+  /* Switch header background for mobile view */
+  header {
+    background-image: url('Mobile Header Banner.png'); /* Mobile-specific image */
+  }
+
+  /* Switch footer background for mobile view */
+  footer {
+    background-image: url('Mobile Footer Banner.png'); /* Mobile-specific image */
   }
 }
 
 /* For small mobile devices */
 @media (max-width: 480px) {
   .page-title {
-    font-size: 0.75rem; /* Reduce font size for small screens */
-    padding-left: 10px;
-    padding-right: 10px;
+    font-size: 1rem; /* Adjust size for small screens */
+    padding: 0 5px; /* Less padding for small screens */
   }
 
   .filter-btn {
     padding: 6px;
-    font-size: 0.875rem; /* Adjust font size for small screens */
+    font-size: 1rem; /* Adjust font size for small screens */
   }
 
   #search-input {
@@ -234,9 +230,8 @@ footer {
   }
 
   #video-list th, #video-list td {
-    font-size: 0.75rem; /* Reduce font size for small screens */
+    font-size: 1rem; /* Adjust font size for small screens */
     padding: 8px; /* Adjust padding for small screens */
-    word-wrap: break-word; /* Ensure wrapping of content in table cells */
   }
 
   /* Allow table to become horizontally scrollable for small screens */
@@ -244,10 +239,19 @@ footer {
     display: block;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    table-layout: fixed; /* Fix column widths to enforce wrapping */
   }
 
   #video-list th, #video-list td {
-    white-space: normal; /* Allow wrapping within cells */
+    white-space: nowrap; /* Prevent text wrapping in small screens */
+  }
+
+  /* Switch header background for small mobile view */
+  header {
+    background-image: url('Mobile Header Banner.png'); /* Small mobile-specific image */
+  }
+
+  /* Switch footer background for small mobile view */
+  footer {
+    background-image: url('Mobile Footer Banner.png'); /* Small mobile-specific image */
   }
 }
