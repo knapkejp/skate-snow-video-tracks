@@ -77,7 +77,6 @@ footer {
   align-items: center;
   flex-wrap: nowrap; /* Prevent wrapping */
   width: 100%; /* Make the container stretch the full width */
-  max-width: 100%; /* Ensure search container does not exceed screen width */
   justify-content: space-between; /* Space out items */
   box-sizing: border-box; /* Ensure padding is included in width */
 }
@@ -171,17 +170,19 @@ footer {
     font-size: 1.125rem; /* Adjust size for medium screens */
   }
 
+  /* Fix filter buttons alignment */
   .search-container {
-    flex-wrap: wrap; /* Allow wrapping on mobile */
-    justify-content: flex-start; /* Align items to the left */
-    width: 100%; /* Ensure search bar container fits within the screen */
-    box-sizing: border-box; /* Include padding in width */
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    justify-content: flex-start; /* Align buttons to the left */
   }
 
+  /* Ensure buttons and input are not stacked on mobile */
   .filter-btn, #search-input {
-    width: 100%; /* Ensure items take up full width in column layout */
-    box-sizing: border-box; /* Ensure padding is included in width */
-    margin-bottom: 10px; /* Add space between search and button */
+    flex: 0 1 auto;
+    width: auto; /* Ensure buttons remain side-by-side */
   }
 
   .filter-btn {
@@ -213,7 +214,7 @@ footer {
 /* For small mobile devices */
 @media (max-width: 480px) {
   .page-title {
-    font-size: 1rem; /* Adjust size for small screens */
+    font-size: 0.875rem; /* Significantly reduce font size for small screens */
   }
 
   .filter-btn {
@@ -226,8 +227,9 @@ footer {
   }
 
   #video-list th, #video-list td {
-    font-size: 1rem; /* Adjust font size for small screens */
+    font-size: 0.75rem; /* Reduce font size for small screens */
     padding: 8px; /* Adjust padding for small screens */
+    word-wrap: break-word; /* Ensure wrapping of content in table cells */
   }
 
   /* Allow table to become horizontally scrollable for small screens */
