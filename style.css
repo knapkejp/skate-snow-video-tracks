@@ -58,13 +58,15 @@ footer {
 
 /* Page title styling */
 .page-title {
-  font-size: 1.5rem; /* Default size with rem for scaling */
+  font-size: 0.875rem; /* Reduced font size for mobile */
   font-family: "Covered By Your Grace", cursive;
   font-weight: 400;
   font-style: normal;
   color: #333;
   margin-bottom: 10px; /* Add space between title and search container */
   text-align: center; /* Center text */
+  padding-left: 10px; /* Add left padding */
+  padding-right: 10px; /* Add right padding */
   white-space: nowrap; /* Prevent text wrapping */
   overflow: hidden;
   text-overflow: ellipsis; /* Add ellipsis if text overflows */
@@ -167,7 +169,9 @@ footer {
   }
 
   .page-title {
-    font-size: 1.125rem; /* Adjust size for medium screens */
+    font-size: 0.75rem; /* Further reduced size for smaller mobile screens */
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   /* Fix filter buttons alignment */
@@ -204,22 +208,25 @@ footer {
     display: block;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+    table-layout: fixed; /* Fix column widths to enforce wrapping */
   }
 
   #video-list th, #video-list td {
-    white-space: nowrap; /* Prevent text wrapping in small screens */
+    white-space: normal; /* Allow wrapping within cells */
   }
 }
 
 /* For small mobile devices */
 @media (max-width: 480px) {
   .page-title {
-    font-size: 0.875rem; /* Significantly reduce font size for small screens */
+    font-size: 0.75rem; /* Reduce font size for small screens */
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .filter-btn {
     padding: 6px;
-    font-size: 1rem; /* Adjust font size for small screens */
+    font-size: 0.875rem; /* Adjust font size for small screens */
   }
 
   #search-input {
@@ -237,9 +244,10 @@ footer {
     display: block;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+    table-layout: fixed; /* Fix column widths to enforce wrapping */
   }
 
   #video-list th, #video-list td {
-    white-space: nowrap; /* Prevent text wrapping in small screens */
+    white-space: normal; /* Allow wrapping within cells */
   }
 }
