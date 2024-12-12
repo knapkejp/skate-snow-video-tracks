@@ -30,6 +30,13 @@ header {
   overflow: hidden; /* Ensure borders are contained within the element */
 }
 
+/* Mobile-specific header background */
+@media (max-width: 768px) {
+  header {
+    background-image: url('Mobile Header Banner.png');
+  }
+}
+
 /* Footer styling */
 footer {
   background-image: url('Database Footer Banner.png');
@@ -44,6 +51,13 @@ footer {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   position: relative; /* Needed for pseudo-elements */
   overflow: hidden; /* Ensure borders are contained within the element */
+}
+
+/* Mobile-specific footer background */
+@media (max-width: 768px) {
+  footer {
+    background-image: url('Mobile Footer Banner.png');
+  }
 }
 
 /* Container for page title, filter buttons, and search input */
@@ -164,8 +178,9 @@ footer {
   }
 
   .page-title {
-    font-size: 1.125rem; /* Adjust size for medium screens */
-    padding: 0 10px; /* Add some padding around the title */
+    font-size: 1rem; /* Smaller size for mobile */
+    padding-left: 10px; /* Padding for left side */
+    padding-right: 10px; /* Padding for right side */
   }
 
   .search-container {
@@ -191,67 +206,44 @@ footer {
     padding: 8px; /* Adjust padding for medium screens */
   }
 
-  /* Allow table to become horizontally scrollable for small screens */
+  /* Apply fixed table layout for better wrapping and adjust column widths */
   #video-list {
-    display: block;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    table-layout: fixed;
   }
 
   #video-list th, #video-list td {
-    white-space: nowrap; /* Prevent text wrapping in small screens */
-  }
-
-  /* Switch header background for mobile view */
-  header {
-    background-image: url('Mobile Header Banner.png'); /* Mobile-specific image */
-  }
-
-  /* Switch footer background for mobile view */
-  footer {
-    background-image: url('Mobile Footer Banner.png'); /* Mobile-specific image */
+    white-space: normal; /* Allow wrapping of text */
   }
 }
 
 /* For small mobile devices */
 @media (max-width: 480px) {
   .page-title {
-    font-size: 1rem; /* Adjust size for small screens */
-    padding: 0 5px; /* Less padding for small screens */
+    font-size: 0.875rem; /* Even smaller size for small screens */
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .filter-btn {
     padding: 6px;
-    font-size: 1rem; /* Adjust font size for small screens */
+    font-size: 0.875rem; /* Adjust font size for small screens */
   }
 
   #search-input {
-    font-size: 1rem; /* Adjust font size for small screens */
+    font-size: 0.875rem; /* Adjust font size for small screens */
   }
 
   #video-list th, #video-list td {
-    font-size: 1rem; /* Adjust font size for small screens */
-    padding: 8px; /* Adjust padding for small screens */
+    font-size: 0.75rem; /* Adjust font size for small screens */
+    padding: 6px; /* Adjust padding for small screens */
   }
 
-  /* Allow table to become horizontally scrollable for small screens */
+  /* Apply fixed table layout for better wrapping and adjust column widths */
   #video-list {
-    display: block;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    table-layout: fixed;
   }
 
   #video-list th, #video-list td {
-    white-space: nowrap; /* Prevent text wrapping in small screens */
-  }
-
-  /* Switch header background for small mobile view */
-  header {
-    background-image: url('Mobile Header Banner.png'); /* Small mobile-specific image */
-  }
-
-  /* Switch footer background for small mobile view */
-  footer {
-    background-image: url('Mobile Footer Banner.png'); /* Small mobile-specific image */
+    white-space: normal; /* Allow wrapping of text */
   }
 }
