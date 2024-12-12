@@ -172,8 +172,8 @@ footer {
   }
 
   .search-container {
-    flex-wrap: nowrap; /* Prevent wrapping */
-    justify-content: space-between; /* Keep items spaced */
+    flex-wrap: wrap; /* Allow wrapping on mobile */
+    justify-content: flex-start; /* Align items to the left */
     width: 100%; /* Ensure search bar container fits within the screen */
     box-sizing: border-box; /* Include padding in width */
   }
@@ -181,6 +181,7 @@ footer {
   .filter-btn, #search-input {
     width: 100%; /* Ensure items take up full width in column layout */
     box-sizing: border-box; /* Ensure padding is included in width */
+    margin-bottom: 10px; /* Add space between search and button */
   }
 
   .filter-btn {
