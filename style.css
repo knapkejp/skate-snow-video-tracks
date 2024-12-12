@@ -9,40 +9,65 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
-  padding: 20px;
+  padding: 10px;
+  overflow-x: hidden; /* Prevent horizontal scrolling of body */
+  font-size: 1rem; /* Use rem units for better scaling */
 }
 
 /* Header container with background image */
 header {
-  background-image: url('Database Header Banner.png');
+  background-image: url('images/Database Header Banner.png');
+  background-size: contain; /* Ensure the background image contains the element */
   background-position: center;
   background-repeat: no-repeat;
   padding: 48px 20px;
   color: white;
   text-align: center;
   font-family: 'Roboto', sans-serif;
-  font-size: 18px;
+  font-size: 1.125rem; /* Adjusted to use rem units */
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-  border-top: 4px solid #2980b9;
+  position: relative; /* Needed for pseudo-elements */
+  overflow: hidden; /* Ensure borders are contained within the element */
+}
+
+/* Footer styling */
+footer {
+  background-image: url('images/Database Footer Banner.png');
+  background-size: contain; /* Ensure the background image contains the element */
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 48px 20px;
+  color: white;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.125rem; /* Adjusted to use rem units */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  position: relative; /* Needed for pseudo-elements */
+  overflow: hidden; /* Ensure borders are contained within the element */
 }
 
 /* Container for page title, filter buttons, and search input */
 .header-content {
-  margin-top: 10px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
   padding: 10px 0;
+  margin-top: 5px;
 }
 
 /* Page title styling */
 .page-title {
-  font-size: 10px;
+  font-size: 1.5rem; /* Default size with rem for scaling */
   font-family: "Covered By Your Grace", cursive;
   font-weight: 400;
   font-style: normal;
   color: #333;
-  margin: 0;
+  margin-bottom: 10px; /* Add space between title and search container */
+  text-align: center; /* Center text */
+  white-space: nowrap; /* Prevent text wrapping */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Add ellipsis if text overflows */
 }
 
 /* Container for filter buttons and search input */
@@ -50,62 +75,71 @@ header {
   display: flex;
   gap: 15px;
   align-items: center;
+  flex-wrap: nowrap; /* Prevent wrapping */
+  width: 100%; /* Make the container stretch the full width */
+  justify-content: space-between; /* Space out items */
 }
 
 /* Button and search input styling */
 .filter-btn {
+  flex: 0 1 auto; /* Prevent growing and shrinking */
   padding: 10px 20px;
-  font-size: 16px;
+  font-size: 1rem; /* Default size in rem */
   background-color: #3498db;
   color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition */
 }
 
 .filter-btn:hover {
   background-color: #2980b9;
-}
-
-.filter-btn:focus {
-  outline: none;
-  border-color: #2980b9;
+  transform: scale(1.05); /* Slight scale on hover */
 }
 
 .filter-btn.active {
   background-color: #1f6f9d;
+  transform: scale(0.95); /* Slight scale on active */
 }
 
 #search-input {
+  flex: 1 0 auto; /* Allow growing to fill remaining space */
   padding: 10px;
-  width: 350px;
-  font-size: 16px;
+  font-size: 1rem; /* Default size in rem */
   border: 1px solid #ccc;
   border-radius: 4px;
 }
 
-#search-input:focus {
-  outline: none;
-  border-color: #3498db;
-}
-
 /* Table styling */
 #video-list {
-  width: 100%;
-  margin-top: 10px;
+  width: 100%; /* Ensure the table takes up the full width */
   margin-bottom: 20px;
   border-collapse: collapse;
+  table-layout: auto; /* Ensure columns adjust based on content */
+  overflow: hidden; /* Prevent overflow on smaller screens */
 }
 
 #video-list th, #video-list td {
-  padding: 10px;
+  padding: 12px; /* Default padding */
   text-align: left;
   border: 1px solid #ddd;
+  font-size: 1rem; /* Default size in rem */
+  word-wrap: break-word; /* Allow word wrapping within cells */
 }
 
 #video-list th {
   background-color: #3498db;
   color: white;
+  cursor: pointer;
+}
+
+#video-list th:hover {
+  background-color: #2980b9;
+}
+
+#video-list th:active {
+  background-color: #1f6f9d;
 }
 
 #video-list td {
@@ -118,23 +152,84 @@ header {
 
 #video-list tr:hover {
   background-color: #f1f1f1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow on row hover */
 }
 
-/* Footer styling */
-footer {
-  background-image: url('Database Footer Banner.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 48px 20px;
-  color: white;
-  text-align: center;
-  font-family: 'Roboto', sans-serif;
-  font-size: 18px;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-  border-top: 4px solid #2980b9;
+/* Media Queries */
+
+/* For tablets and mobile devices */
+@media (max-width: 768px) {
+  .header-content {
+    text-align: center; /* Ensure centered text alignment */
+  }
+
+  .page-title {
+    font-size: 1.125rem; /* Adjust size for medium screens */
+  }
+
+  .search-container {
+    flex-wrap: nowrap; /* Prevent wrapping */
+    justify-content: space-between; /* Keep items spaced */
+  }
+
+  .filter-btn, #search-input {
+    width: 100%; /* Ensure items take up full width in column layout */
+  }
+
+  .filter-btn {
+    padding: 8px;
+    font-size: 0.875rem; /* Adjust font size for medium screens */
+  }
+
+  #search-input {
+    font-size: 0.875rem; /* Adjust font size for medium screens */
+  }
+
+  #video-list th, #video-list td {
+    font-size: 0.75rem; /* Adjust font size for medium screens */
+    padding: 8px; /* Adjust padding for medium screens */
+  }
+
+  /* Allow table to become horizontally scrollable for small screens */
+  #video-list {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  #video-list th, #video-list td {
+    white-space: nowrap; /* Prevent text wrapping in small screens */
+  }
 }
 
-footer p {
-  margin: 0;
+/* For small mobile devices */
+@media (max-width: 480px) {
+  .page-title {
+    font-size: 1rem; /* Adjust size for small screens */
+  }
+
+  .filter-btn {
+    padding: 6px;
+    font-size: 1rem; /* Adjust font size for small screens */
+  }
+
+  #search-input {
+    font-size: 1rem; /* Adjust font size for small screens */
+  }
+
+  #video-list th, #video-list td {
+    font-size: 1rem; /* Adjust font size for small screens */
+    padding: 8px; /* Adjust padding for small screens */
+  }
+
+  /* Allow table to become horizontally scrollable for small screens */
+  #video-list {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  #video-list th, #video-list td {
+    white-space: nowrap; /* Prevent text wrapping in small screens */
+  }
 }
