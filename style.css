@@ -17,7 +17,7 @@ body {
 /* Header container with background image */
 header {
   background-image: url('Database Header Banner.png');
-  background-size: contain; /* Ensure the background image contains the element */
+  background-size: cover; /* Ensure the background image contains the element */
   background-position: center;
   background-repeat: no-repeat;
   padding: 48px 20px;
