@@ -7,7 +7,7 @@ let sortDirection = 'desc';  // Default sort direction is descending
 
 // Function to fetch the video data from the API
 function fetchVideos() {
-  fetch('https://dry-chamber-45874-37135eca9e86.herokuapp.com')  // API endpoint to fetch video data
+  fetch('https://dry-chamber-45874-37135eca9e86.herokuapp.com/get_video_data')  // API endpoint to fetch video data
     .then(response => response.json())  // Parse the response as JSON
     .then(data => {
       allVideos = data;  // Save all video data globally
