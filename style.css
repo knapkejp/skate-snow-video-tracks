@@ -424,7 +424,7 @@ footer {
 
   /* Apply fixed table layout for better wrapping and adjust column widths */
   #video-list {
-    table-layout: fixed;
+    table-layout: auto;
   }
 
   #video-list th, #video-list td {
