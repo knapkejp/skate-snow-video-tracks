@@ -384,7 +384,7 @@ footer {
   }
 
   .page-title {
-    font-size: .5rem; /* Smaller size for mobile */
+    font-size: .25rem; /* Smaller size for mobile */
     padding-left: 10px; /* Padding for left side */
     padding-right: 10px; /* Padding for right side */
   }
