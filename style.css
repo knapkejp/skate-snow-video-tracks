@@ -348,6 +348,16 @@ footer {
     table-layout: fixed;
   }
 
+  /* Adjust widths for mobile view */
+  #video-list th:nth-child(1),
+  #video-list td:nth-child(1) {
+    width: 40px; /* Adjust width of 'Type' column for mobile */
+  }
+  
+  #video-list th:nth-child(5),
+  #video-list td:nth-child(5) {
+    width: 30px; /* Adjust width of 'Type' column for mobile */
+  }
   #video-list th, #video-list td {
     white-space: normal; /* Allow wrapping of text */
   }
@@ -426,6 +436,17 @@ footer {
     table-layout: fixed;
   }
 
+  /* Adjust widths for mobile view */
+  #video-list th:nth-child(1),
+  #video-list td:nth-child(1) {
+    width: 40px; /* Adjust width of 'Type' column for mobile */
+  }
+  
+  #video-list th:nth-child(5),
+  #video-list td:nth-child(5) {
+    width: 30px; /* Adjust width of 'Type' column for mobile */
+  }
+	
   #video-list th, #video-list td {
     white-space: normal; /* Allow wrapping of text */
   }
