@@ -16,7 +16,7 @@ body {
 
 /* Header container with background image */
 header {
-  background-image: url('images/Database Header Banner.png');
+  background-image: url('Database Header Banner.png');
   background-size: contain; /* Ensure the background image contains the element */
   background-position: center;
   background-repeat: no-repeat;
@@ -33,13 +33,13 @@ header {
 /* Mobile-specific header background */
 @media (max-width: 768px) {
   header {
-    background-image: url('images/Mobile Header Banner.png');
+    background-image: url('Mobile Header Banner.png');
   }
 }
 
 /* Footer styling */
 footer {
-  background-image: url('images/Database Footer Banner.png');
+  background-image: url('Database Footer Banner.png');
   background-size: contain; /* Ensure the background image contains the element */
   background-position: center;
   background-repeat: no-repeat;
@@ -56,7 +56,7 @@ footer {
 /* Mobile-specific footer background */
 @media (max-width: 768px) {
   footer {
-    background-image: url('images/Mobile Footer Banner.png');
+    background-image: url('Mobile Footer Banner.png');
   }
 }
 
