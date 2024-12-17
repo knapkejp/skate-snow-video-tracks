@@ -39,7 +39,7 @@ function displayVideos(videos) {
     // Determine the image for the "Type" column
     let typeImage = '';
     if (video.Type === 'Snow') {
-      typeImage = '<img src="Snow Flake.png" alt="Snow" style="width: 200px; height: auto;" />';
+      typeImage = '<img src="Snow Flake.png" alt="Snow" style="width: 20px; height: auto;" />';
     } else if (video.Type === 'Skate') {
       typeImage = '<img src="Skate Wheel.png" alt="Skate" style="width: 20px; height: auto;" />';
     } else {
