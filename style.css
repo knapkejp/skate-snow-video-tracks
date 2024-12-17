@@ -78,7 +78,6 @@ footer {
   color: #333;
   margin: 0; /* Remove default margin */
   text-align: left; /* Left align the title */
-  white-space: nowrap; /* Prevent wrapping */
   overflow: hidden;
   text-overflow: ellipsis; /* Add ellipsis if text overflows */
   flex: 1; /* Allow page title to take up available space */
@@ -170,7 +169,7 @@ footer {
   margin-top: 10px;
   margin-bottom: 20px;
   border-collapse: collapse;
-  table-layout: fixed; /* Ensure columns adjust based on content */
+  table-layout: auto; /* Ensure columns adjust based on content */
   overflow: hidden; /* Prevent overflow on smaller screens */
 }
 
