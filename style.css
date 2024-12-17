@@ -16,7 +16,7 @@ body {
 
 /* Header container with background image */
 header {
-  background-image: url('Database Header Banner.png');
+  background-image: url('images/Database Header Banner.png');
   background-size: contain; /* Ensure the background image contains the element */
   background-position: center;
   background-repeat: no-repeat;
@@ -33,13 +33,13 @@ header {
 /* Mobile-specific header background */
 @media (max-width: 768px) {
   header {
-    background-image: url('Mobile Header Banner.png');
+    background-image: url('images/Mobile Header Banner.png');
   }
 }
 
 /* Footer styling */
 footer {
-  background-image: url('Database Footer Banner.png');
+  background-image: url('images/Database Footer Banner.png');
   background-size: contain; /* Ensure the background image contains the element */
   background-position: center;
   background-repeat: no-repeat;
@@ -56,55 +56,62 @@ footer {
 /* Mobile-specific footer background */
 @media (max-width: 768px) {
   footer {
-    background-image: url('Mobile Footer Banner.png');
+    background-image: url('images/Mobile Footer Banner.png');
   }
 }
 
-/* Container for page title, filter buttons, and search input */
+/* Container for page title and external link buttons */
 .header-content {
-  display: flex;
-  flex-direction: column; /* Stack items vertically */
-  justify-content: center; /* Center items vertically */
-  align-items: center; /* Center items horizontally */
-  padding: 10px 0;
-  margin-top: 5px;
+  display: flex; /* Use flexbox to place page title and external buttons on the same line */
+  justify-content: space-between; /* Space between the title and the external link buttons */
+  align-items: center; /* Vertically center the items */
+  width: 100%; /* Make sure it takes up the full width */
+  padding: 10px 0; /* Add padding */
+  margin-top: 5px; /* Optional: small margin at the top */
 }
 
 /* Page title styling */
 .page-title {
-  font-size: 1.5rem; /* Default size with rem for scaling */
+  font-size: 1.5rem; /* Page title font size */
   font-family: "Covered By Your Grace", cursive;
   font-weight: 400;
-  font-style: normal;
   color: #333;
-  margin-bottom: 10px; /* Add space between title and search container */
-  text-align: center; /* Center text */
-  white-space: nowrap; /* Prevent text wrapping */
+  margin: 0; /* Remove default margin */
+  text-align: left; /* Left align the title */
+  white-space: nowrap; /* Prevent wrapping */
   overflow: hidden;
   text-overflow: ellipsis; /* Add ellipsis if text overflows */
+  flex: 1; /* Allow page title to take up available space */
 }
 
-/* Container for filter buttons and search input */
+/* Container for filter buttons and search bar (under the page title) */
 .search-container {
   display: flex;
-  gap: 15px;
+  gap: 10px;
   align-items: center;
   flex-wrap: nowrap; /* Prevent wrapping */
   width: 100%; /* Make the container stretch the full width */
-  justify-content: space-between; /* Space out items */
+  justify-content: center; /* Center the items */
+  margin-top: 10px; /* Add some space between the header and search container */
+  margin-bottom: 10px; /* Add some space between the header and search container */
 }
 
-/* Button and search input styling */
+/* Filter button styling */
 .filter-btn {
-  flex: 0 1 auto; /* Prevent growing and shrinking */
-  padding: 10px 20px;
-  font-size: 1rem; /* Default size in rem */
+  padding: 8px 15px;
+  font-size: 1rem;
   background-color: #3498db;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  max-width: 100%; /* Allow the button to shrink based on content */
   color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  flex: 1 1 auto; /* Allow the button to grow and shrink within the container */
 }
 
 .filter-btn:hover {
@@ -117,17 +124,50 @@ footer {
   transform: scale(0.95); /* Slight scale on active */
 }
 
+/* Search input styling */
 #search-input {
-  flex: 1 0 auto; /* Allow growing to fill remaining space */
   padding: 10px;
-  font-size: 1rem; /* Default size in rem */
+  font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 4px;
+  flex: 1 1 60%; /* Allow search bar to grow and shrink */
 }
+
+/* Styling for the external links container */
+.external-links {
+  display: flex;
+  align-items: center; /* Align the image and buttons vertically */
+  gap: 10px; /* Add space between the image and buttons */
+  justify-content: flex-start; /* Align everything to the left */
+}
+
+.external-link-icon {
+  width: 50px; /* Adjust size of the icon */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* External button styling */
+.external-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #2ecc71; /* Green button color */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+.external-btn:hover {
+  background-color: #27ae60; /* Darker green on hover */
+  transform: scale(1.05); /* Slight scale on hover */
+}
+
 
 /* Table styling */
 #video-list {
   width: 100%; /* Ensure the table takes up the full width */
+  margin-top: 10px;
   margin-bottom: 20px;
   border-collapse: collapse;
   table-layout: auto; /* Ensure columns adjust based on content */
@@ -169,6 +209,94 @@ footer {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow on row hover */
 }
 
+/* Feedback Section container (Centered) */
+.feedback-section {
+  text-align: center;
+  padding: 10px 0;  /* Add some space between content */
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%
+}
+
+/* The container for feedback (adjusted for horizontal layout) */
+.feedback-container {
+  display: flex; /* Use flexbox to align items horizontally */
+  align-items: center; /* Vertically center the items */
+  width: 100%;  /* Control the width of the feedback container */
+  gap: 0;
+  padding: 0;
+  margin: 0; /* Space between table and feedback section */
+}
+
+/* Feedback paragraph (Left-aligned) */
+.feedback-container p {
+  font-size: 1.125rem;
+  margin: 0;
+  text-align: left;
+  flex-grow: 0 1 auto; /* Allow paragraph to grow and fill space */
+  white-space: nowrap; /* Prevent the paragraph from wrapping */
+  overflow: hidden; /* Hide overflow text */
+  padding-right: 10px;
+  padding-left: 0;
+}
+
+/* Contact Form (aligned to the right of the paragraph) */
+.contact-form {
+  display: flex;
+  align-items: center; /* Vertically center the items */
+  gap: 10px; /* Space between form elements */
+  flex-grow: 1; /* Allow the form to grow and fill space if needed */
+  margin-left: 0;
+}
+
+/* Contact Textarea */
+#user-feedback {
+  width: 100%; /* Make the textarea take up the available space */
+  height: 40px; /* Fix the height */
+  min-height: 40px; /* Ensure the minimum height stays fixed */
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin: 0;
+  resize: none; /* Prevent resizing of the text area */
+  flex-grow: 2;
+}
+
+/* Contact Button */
+.contact-btn {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  height: 40px; /* Set a fixed height for the button */
+  line-height: 20px; /* Vertically center text inside the button */
+  white-space: nowrap; /* Prevent wrapping */
+  display: inline-flex; /* Allow button to stretch based on content */
+  justify-content: center; /* Center text inside */
+  align-items: center; /* Vertically center text */
+  width: auto; /* Let the button grow based on content */
+  min-width: 100px; /* Add a minimum width to prevent it from shrinking too much */
+  flex-grow: 1;
+}
+
+.contact-btn:hover {
+  background-color: #2980b9;
+  transform: scale(1.05); /* Slight scale on hover */
+}
+
+.contact-btn:active {
+  background-color: #1f6f9d;
+}
+
+
 /* Media Queries */
 
 /* For tablets and mobile devices */
@@ -178,31 +306,41 @@ footer {
   }
 
   .page-title {
-    font-size: 1rem; /* Smaller size for mobile */
+    font-size: .5rem; /* Smaller size for mobile */
     padding-left: 10px; /* Padding for left side */
     padding-right: 10px; /* Padding for right side */
   }
+  
+  .external-btn {
+    padding: 8px 16px;
+    font-size: 0.5rem; /* Adjust font size for medium screens */
+}
+
+  .external-link-icon {
+    width: 20px; /* Adjust size of the icon */
+    height: auto; /* Maintain aspect ratio */
+}
 
   .search-container {
     flex-wrap: nowrap; /* Prevent wrapping */
+	flex-grow: 0 1 auto; /* Allow paragraph to grow and fill space */
+    white-space: nowrap; /* Prevent the paragraph from wrapping */
     justify-content: space-between; /* Keep items spaced */
   }
 
-  .filter-btn, #search-input {
+  #search-input {
     width: 100%; /* Ensure items take up full width in column layout */
+	font-size: 0.5rem; /* Adjust font size for medium screens */
+	min-width: 120px; /* Adjust minimum width */
   }
 
   .filter-btn {
-    padding: 8px;
-    font-size: 0.875rem; /* Adjust font size for medium screens */
-  }
-
-  #search-input {
-    font-size: 0.875rem; /* Adjust font size for medium screens */
+    padding: 8px 16px;
+    font-size: 0.5rem; /* Adjust font size for medium screens */
   }
 
   #video-list th, #video-list td {
-    font-size: 0.75rem; /* Adjust font size for medium screens */
+    font-size: 0.5rem; /* Adjust font size for medium screens */
     padding: 8px; /* Adjust padding for medium screens */
   }
 
@@ -214,28 +352,74 @@ footer {
   #video-list th, #video-list td {
     white-space: normal; /* Allow wrapping of text */
   }
+  
+  .feedback-container p {
+    font-size: .5rem; /* Smaller size for mobile */
+    padding-left: 10px; /* Padding for left side */
+    padding-right: 10px; /* Padding for right side */
+	white-space: normal;
+  }
+  
+  #user-feedback {
+    width: 100%; /* Ensure items take up full width in column layout */
+	height: 40px;
+	font-size: 0.5rem; /* Adjust font size for medium screens */
+	min-width: 120px; /* Adjust minimum width */
+  }
+  
+  .contact-btn {
+	width: 100%;
+	height: 40px;
+	padding: 8px 16px;
+    font-size: 0.5rem; /* Adjust font size for medium screens */
+  }
+  
+  
 }
 
 /* For small mobile devices */
 @media (max-width: 480px) {
-  .page-title {
-    font-size: 0.875rem; /* Even smaller size for small screens */
-    padding-left: 10px;
-    padding-right: 10px;
+  .header-content {
+    text-align: center; /* Ensure centered text alignment */
   }
 
-  .filter-btn {
-    padding: 6px;
-    font-size: 0.875rem; /* Adjust font size for small screens */
+  .page-title {
+    font-size: .5rem; /* Smaller size for mobile */
+    padding-left: 10px; /* Padding for left side */
+    padding-right: 10px; /* Padding for right side */
+  }
+  
+  .external-btn {
+    padding: 8px 16px;
+    font-size: 0.5rem; /* Adjust font size for medium screens */
+}
+
+  .external-link-icon {
+    width: 20px; /* Adjust size of the icon */
+    height: auto; /* Maintain aspect ratio */
+}
+
+  .search-container {
+    flex-wrap: nowrap; /* Prevent wrapping */
+	flex-grow: 0 1 auto; /* Allow paragraph to grow and fill space */
+    white-space: nowrap; /* Prevent the paragraph from wrapping */
+    justify-content: space-between; /* Keep items spaced */
   }
 
   #search-input {
-    font-size: 0.875rem; /* Adjust font size for small screens */
+    width: 100%; /* Ensure items take up full width in column layout */
+	font-size: 0.5rem; /* Adjust font size for medium screens */
+	min-width: 120px; /* Adjust minimum width */
+  }
+
+  .filter-btn {
+    padding: 8px 16px;
+    font-size: 0.5rem; /* Adjust font size for medium screens */
   }
 
   #video-list th, #video-list td {
-    font-size: 0.75rem; /* Adjust font size for small screens */
-    padding: 6px; /* Adjust padding for small screens */
+    font-size: 0.5rem; /* Adjust font size for medium screens */
+    padding: 8px; /* Adjust padding for medium screens */
   }
 
   /* Apply fixed table layout for better wrapping and adjust column widths */
@@ -245,5 +429,26 @@ footer {
 
   #video-list th, #video-list td {
     white-space: normal; /* Allow wrapping of text */
+  }
+  
+  .feedback-container p {
+    font-size: .5rem; /* Smaller size for mobile */
+    padding-left: 10px; /* Padding for left side */
+    padding-right: 10px; /* Padding for right side */
+	white-space: normal;
+  }
+  
+  #user-feedback {
+    width: 100%; /* Ensure items take up full width in column layout */
+	height: 40px;
+	font-size: 0.5rem; /* Adjust font size for medium screens */
+	min-width: 120px; /* Adjust minimum width */
+  }
+  
+  .contact-btn {
+	width: 100%;
+	height: 40px;
+	padding: 8px 16px;
+    font-size: 0.5rem; /* Adjust font size for medium screens */
   }
 }
