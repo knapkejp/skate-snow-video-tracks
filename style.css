@@ -170,7 +170,7 @@ footer {
   margin-top: 10px;
   margin-bottom: 20px;
   border-collapse: collapse;
-  table-layout: auto; /* Ensure columns adjust based on content */
+  table-layout: fixed; /* Ensure columns adjust based on content */
   overflow: hidden; /* Prevent overflow on smaller screens */
 }
 
@@ -384,7 +384,7 @@ footer {
   }
 
   .page-title {
-    font-size: .25rem; /* Smaller size for mobile */
+    font-size: .35rem; /* Smaller size for mobile */
     padding-left: 10px; /* Padding for left side */
     padding-right: 10px; /* Padding for right side */
   }
@@ -424,7 +424,7 @@ footer {
 
   /* Apply fixed table layout for better wrapping and adjust column widths */
   #video-list {
-    table-layout: auto;
+    table-layout: fixed;
   }
 
   #video-list th, #video-list td {
