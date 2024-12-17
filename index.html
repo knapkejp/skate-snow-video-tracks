@@ -22,6 +22,14 @@
       <h1>Skate and Snowboard Video Tracks</h1>
     </div>
 
+	  <!-- Add two new buttons for external links -->
+  <div class="external-links">
+	<img src="images/Headphones.png" alt="External Links" class="external-link-icon"> <!-- Your image here -->
+    <button class="external-btn" onclick="window.location.href='https://open.spotify.com/playlist/4iNTd89nNZrUt3572bKlIY?si=qT_WRDR4RU-5ZMX3-Y9WkA'">Snowboard Playlist</button>
+	<button class="external-btn" onclick="window.location.href='https://open.spotify.com/playlist/3dZr88VsMVpHDS93aiLKBy?si=j3CrgXr4TkWSKBdyQoUUPQ'">Skate Playlist</button>
+  </div>
+  </div>
+
     <!-- Filter buttons and search input -->
     <div class="search-container">
       <button id="all-btn" class="filter-btn active" onclick="filterByType('All')">All</button>
@@ -30,6 +38,10 @@
       <input type="text" id="search-input" placeholder="Search by Crew, Title, Rider, Song, etc..." onkeyup="filterVideos()">
     </div>
   </div>
+
+	
+</div>
+
 
   <main>
     <!-- Video list -->
@@ -49,6 +61,20 @@
       <tbody></tbody> <!-- Video data will be inserted here -->
     </table>
   </main>
+
+<!-- Feedback Section (Contact Form) -->
+<div class="feedback-section">
+  <div class="feedback-container">
+    <p>New video recommendation? Is your favorite part & song missing from the database? See an error?</p>
+    
+    <div class="contact-form">
+      <textarea id="user-feedback" placeholder="Write your feedback here..." rows="4"></textarea>
+      <button class="contact-btn" onclick="sendEmail()">Send Feedback</button>
+    </div>
+  </div>
+</div>
+
+
 
   <footer>
     <p></p>
