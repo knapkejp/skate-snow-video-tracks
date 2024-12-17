@@ -340,7 +340,7 @@ footer {
 
   #video-list th, #video-list td {
     font-size: 0.5rem; /* Adjust font size for medium screens */
-    padding: 8px; /* Adjust padding for medium screens */
+    padding: 4px; /* Adjust padding for medium screens */
   }
 
   /* Apply fixed table layout for better wrapping and adjust column widths */
@@ -428,7 +428,7 @@ footer {
 
   #video-list th, #video-list td {
     font-size: 0.5rem; /* Adjust font size for medium screens */
-    padding: 8px; /* Adjust padding for medium screens */
+    padding: 4px; /* Adjust padding for medium screens */
   }
 
   /* Apply fixed table layout for better wrapping and adjust column widths */
