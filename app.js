@@ -7,7 +7,7 @@ let sortDirection = 'desc';  // Default sort direction is descending
 
 // Function to fetch the video data from the API
 function fetchVideos() {
-  fetch('https://dry-chamber-45874-37135eca9e86.herokuapp.com/get_video_data')  // API endpoint to fetch video data
+  fetch('https://dry-chamber-45874-37135eca9e86.herokuapp.com')  // API endpoint to fetch video data
     .then(response => response.json())  // Parse the response as JSON
     .then(data => {
       allVideos = data;  // Save all video data globally
@@ -163,10 +163,27 @@ function filterVideos() {
   displayVideos(filteredVideos);
 }
 
-// Initialize page
-if (typeof window !== "undefined") {
-  window.onload = function() {
-    fetchVideos();  // Fetch the videos
-    filterByType('All');  // Set "All" filter as the default on page load
-  };
+// Fuction to send a feedback email
+function sendEmail() {
+  var userFeedback = document.getElementById('user-feedback').value.trim();
+
+  // Ensure the user has entered feedback
+  if (userFeedback === '') {
+    alert('Please enter your feedback before sending.');
+    return;
+  }
+
+  // Create the mailto link with the user's feedback in the body
+  var mailtoLink = 'mailto:jknapke17@gmail.com?subject=Feedback&body=' + encodeURIComponent(userFeedback);
+
+  // Open the mailto link
+  window.location.href = mailtoLink;
 }
+
+
+
+// Initialize page
+window.onload = function() {
+  fetchVideos();  // Fetch the videos
+  filterByType('All');  // Set "All" filter as the default on page load
+};
