@@ -3,6 +3,8 @@
     "cors": "^2.8.5",
     "sqlite3": "^5.1.7",
     "express": "^4.21.2"
+    "mysql2": "^3.11.4",
+    "pg": "^8.13.1",
   },
   "name": "15136",
   "version": "1.0.0",
@@ -17,3 +19,4 @@
   "license": "ISC",
   "description": ""
 }
+
