@@ -2,7 +2,7 @@
   "dependencies": {
     "cors": "^2.8.5",
     "sqlite3": "^5.1.7",
-    "express": "^4.21.2"
+    "express": "^4.21.2",
     "mysql2": "^3.11.4",
     "pg": "^8.13.1",
   },
