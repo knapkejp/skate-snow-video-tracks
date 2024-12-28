@@ -174,7 +174,7 @@ function sendEmail() {
   }
 
   // Create the mailto link with the user's feedback in the body
-  var mailtoLink = 'mailto:jknapke17@gmail.com?subject=Feedback&body=' + encodeURIComponent(userFeedback);
+  var mailtoLink = 'mailto:skateandsnowboardvideotracks@gmail.com?subject=Feedback&body=' + encodeURIComponent(userFeedback);
 
   // Open the mailto link
   window.location.href = mailtoLink;
