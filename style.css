@@ -396,22 +396,22 @@ footer {
     font-size: .45rem; /* Smaller size for mobile */
     padding-left: 10px; /* Padding for left side */
     padding-right: 10px; /* Padding for right side */
-    margin-top: 2px;
-    margin-bottom: 2px;
+    margin-top: 0;
+    margin-bottom: 0;
   }
   
   .external-btn {
     padding: 8px 16px;
     font-size: 0.5rem; /* Adjust font size for medium screens */
-    margin-top: 2px;
-    margin-bottom: 2px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
   .external-link-icon {
     width: 20px; /* Adjust size of the icon */
     height: auto; /* Maintain aspect ratio */
-    margin-top: 2px;
-    margin-bottom: 2px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
   .search-container {
@@ -445,7 +445,7 @@ footer {
   /* Adjust widths for mobile view */
   #video-list th:nth-child(1),
   #video-list td:nth-child(1) {
-    width: 35px; /* Adjust width of 'Type' column for mobile */
+    width: 30px; /* Adjust width of 'Type' column for mobile */
   }
   
   #video-list th:nth-child(5),
