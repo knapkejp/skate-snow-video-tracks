@@ -396,16 +396,22 @@ footer {
     font-size: .45rem; /* Smaller size for mobile */
     padding-left: 10px; /* Padding for left side */
     padding-right: 10px; /* Padding for right side */
+    margin-top: 2px;
+    margin-bottom: 2px;
   }
   
   .external-btn {
     padding: 8px 16px;
     font-size: 0.5rem; /* Adjust font size for medium screens */
+    margin-top: 2px;
+    margin-bottom: 2px;
 }
 
   .external-link-icon {
     width: 20px; /* Adjust size of the icon */
     height: auto; /* Maintain aspect ratio */
+    margin-top: 2px;
+    margin-bottom: 2px;
 }
 
   .search-container {
